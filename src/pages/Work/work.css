@@ -1,0 +1,131 @@
+.work-container {
+  background-color: var(--color-black);
+}
+
+.work-container > * {
+  color: var(--bg-beige);
+}
+
+.work {
+  grid-template-columns: 1.5fr 2fr;
+  column-gap: 1.765rem;
+}
+
+/* work-content */
+
+.work-header {
+  padding: 4rem 2rem;
+  padding-right: 0rem;
+  max-width: 500px;
+  margin: 0 auto;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.work-header h2 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-bottom: 0.7rem;
+}
+.work-header h3 {
+  font-size: 0.8rem;
+  font-weight: 200;
+  line-height: 1.7;
+  margin: 0.5rem 0;
+  font-weight: 400;
+}
+
+/* work-project list */
+
+.work-project-list-container {
+  padding-bottom: 4rem;
+  align-self: end;
+  display: flex;
+  flex-direction: column;
+  gap: 1.765rem;
+}
+
+.work-project-list {
+  line-height: 1.1;
+}
+
+.work-project-list a {
+  display: block;
+  color: var(--bg-beige);
+  font-family: var(--font-family-grand);
+  font-size: 7vw;
+}
+
+.work-project-list a:hover {
+  text-decoration: line-through;
+}
+
+.work-project-list h4 {
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  transition: 0.3s;
+}
+
+.work-project-list a:hover + h4 {
+  transform: translateX(10px);
+}
+
+/* WORK RESPONSIVE */
+
+@media screen and (max-width: 1150px) {
+  .work {
+    grid-template-columns: 1fr;
+    column-gap: 0rem;
+    row-gap: 1.765rem;
+  }
+
+  .work-header {
+    position: relative;
+    height: auto;
+    margin: 0;
+    padding: 4rem 2rem;
+  }
+
+  .work-project-list-container {
+    padding-left: 2rem;
+  }
+
+  .work-project-list a {
+    font-size: 10vw;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .work {
+    padding-top: 6rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .work {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-bottom: 2rem;
+  }
+
+  .work-header,
+  .work-project-list-container {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .work-project-list a {
+    font-size: 1.7rem;
+  }
+  .work-project-list h4 {
+    font-size: 0.6rem;
+  }
+}

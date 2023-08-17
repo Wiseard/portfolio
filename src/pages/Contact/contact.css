@@ -1,0 +1,143 @@
+.contact-container {
+  background-color: var(--color-black);
+  min-height: 100vh;
+}
+
+.contact-container > * {
+  color: var(--bg-beige);
+}
+
+.contact {
+  grid-template-columns: 1.5fr 2fr;
+  padding: 6rem 2rem;
+  min-height: 100vh;
+  background-color: var(--color-black);
+}
+
+/* contact content */
+
+.contact-content h2 {
+  font-family: var(--font-family-grand);
+  font-size: 15vw;
+}
+
+.contact-socials p {
+  line-height: 1.7;
+  font-weight: 400;
+}
+
+.contact-socials p:nth-child(2) {
+  margin: 0.765rem 0;
+}
+
+.contact-socials a {
+  color: var(--bg-beige);
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+.contact-socials a:hover {
+  text-decoration: line-through;
+}
+
+/* FORM */
+
+.form-container h3 {
+  text-align: center;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.765rem;
+  margin-top: 1.765rem;
+}
+
+input[name='user_name'],
+input[name='user_email'],
+input[name='message'] {
+  display: block;
+  width: 300px;
+  margin: 0 auto;
+  padding: 15px 20px;
+  background-color: transparent;
+  border: 1px solid var(--bg-beige);
+  color: var(--bg-beige);
+  font-size: 15px;
+  font-weight: 300;
+  outline: none;
+}
+
+.btn-contact-submit {
+  width: 300px;
+  margin: 0 auto;
+  padding: 15px 20px;
+  background-color: var(--bg-beige);
+  border: 1px solid var(--bg-beige);
+  color: var(--color-black);
+  font-size: 15px;
+  font-weight: 300;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.btn-contact-submit:hover {
+  background-color: var(--color-black);
+  color: var(--bg-beige);
+}
+
+input#name::placeholder,
+input#email::placeholder,
+input#message::placeholder {
+  color: var(--bg-beige);
+}
+
+.form-confirmation {
+  margin-top: 0.765rem;
+  width: 300px;
+  margin: 0 auto;
+  margin-top: 0.765rem;
+}
+.form-confirmation h3 {
+  text-align: left;
+  font-size: 0.8rem;
+  font-weight: 400;
+  line-height: 1.5;
+  text-transform: none;
+}
+
+@media screen and (max-width: 1150px) {
+  .contact {
+    grid-template-columns: 1fr;
+    column-gap: 0rem;
+    row-gap: 2.765rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .contact {
+    padding-left: 0rem;
+    padding-right: 0rem;
+  }
+
+  .contact-socials p {
+    font-size: 0.8rem;
+  }
+
+  input[name='user_name'],
+  input[name='user_email'],
+  input[name='message'] {
+    width: 100%;
+  }
+
+  .btn-contact-submit {
+    width: 100%;
+  }
+
+  .form-confirmation {
+    width: 100%;
+  }
+}
