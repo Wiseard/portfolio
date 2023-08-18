@@ -22,7 +22,7 @@ const Contact = () => {
         'service_3kaqtft',
         'template_kflquki',
         form.current,
-        `${import.meta.env.VITE_EMAIL_PUBLIC_KEY}`
+        '6BLdInWYK8y_pfV8J'
       )
       .then(
         (result) => {
