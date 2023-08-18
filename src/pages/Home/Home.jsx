@@ -5,49 +5,64 @@ import { useGlobalContext } from '../../context/global_context'
 import AnimateTitle from '../../components/Animations/AnimateTitle'
 import AnimateSection from '../../components/Animations/AnimateSection'
 import './home.css'
+import { useEffect } from 'react'
+import Seo from '../../components/SEO/Seo'
 
 const Home = () => {
   const { setChangePage } = useGlobalContext()
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   return (
-    <AnimateSection name="container home-container grid">
-      {/* home header */}
-      <div className="home-header">
-        <AnimateTitle duration={0.6} transitionDelay={0.6}>
-          florent baleinier
-        </AnimateTitle>
-        <AnimateTitle tags="h3" duration={0.6} transitionDelay={0.7}>
-          Web Developer / React
-        </AnimateTitle>
-        <AnimateTitle tags="h3" duration={0.6} transitionDelay={0.7}>
-          Currently working as a freelancer
-        </AnimateTitle>
-      </div>
-      {/* home navigation */}
-      <div className="home-navigation">
-        {
-          <ul className="home-navigation-list">
-            {nav.map(({ id, name, url }) => {
-              return (
-                <m.li
-                  key={id + url}
-                  initial={{ filter: 'blur(10px)' }}
-                  animate={{ filter: 'blur(0px)' }}
-                  transition={{
-                    duration: 0.3,
-                    delay: 0.7,
-                    ease: [0.61, 0, 0.4, 1],
-                  }}
-                >
-                  <Link to={url} onClick={() => setChangePage(true)}>
-                    {name}
-                  </Link>
-                </m.li>
-              )
-            })}
-          </ul>
-        }
-      </div>
-    </AnimateSection>
+    <>
+      <Seo
+        title="Florent Baleinier - Portfolio"
+        description="Front-end developer and Web Designer. I design and code beautifully simple things focused on the customer."
+        name="Florent Baleinier"
+        type="website"
+      />
+      <AnimateSection name="container home-container grid">
+        {/* home header */}
+        <div className="home-header">
+          <AnimateTitle duration={0.6} transitionDelay={0.6}>
+            florent baleinier
+          </AnimateTitle>
+          <AnimateTitle tags="h3" duration={0.6} transitionDelay={0.7}>
+            Web Developer / React
+          </AnimateTitle>
+          <AnimateTitle tags="h3" duration={0.6} transitionDelay={0.7}>
+            Currently working as a freelancer
+          </AnimateTitle>
+        </div>
+        {/* home navigation */}
+        <div className="home-navigation">
+          {
+            <ul className="home-navigation-list">
+              {nav.map(({ id, name, url }) => {
+                return (
+                  <m.li
+                    key={id + url}
+                    initial={{ filter: 'blur(10px)' }}
+                    animate={{ filter: 'blur(0px)' }}
+                    transition={{
+                      duration: 0.3,
+                      delay: 0.7,
+                      ease: [0.61, 0, 0.4, 1],
+                    }}
+                  >
+                    <Link to={url} onClick={() => setChangePage(true)}>
+                      {name}
+                    </Link>
+                  </m.li>
+                )
+              })}
+            </ul>
+          }
+        </div>
+      </AnimateSection>
+    </>
   )
 }
 export default Home
