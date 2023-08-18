@@ -16,8 +16,7 @@ const About = () => {
     <>
       <Seo
         title="Florent Baleinier - About"
-        description="I work in Web Design as a freelancer. I also provide
-          my marketing experience to improve SEO and Social Media."
+        description="I work in Web Design as a freelancer. I also provide my marketing experience to improve SEO and Social Media."
         name="Florent Baleinier"
         type="website"
       />

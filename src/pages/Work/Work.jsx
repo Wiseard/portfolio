@@ -18,8 +18,7 @@ const Work = () => {
     <>
       <Seo
         title="Florent Baleinier - Work"
-        description=" This is a showcase of my latest projects built with React, which
-              is the framework I'm using daily.."
+        description=" This is a showcase of my latest projects built with React, which is the framework I'm using daily."
         name="Florent Baleinier"
         type="website"
       />

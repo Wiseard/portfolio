@@ -48,7 +48,7 @@ const Contact = () => {
     <>
       <Seo
         title="Florent Baleinier - Contact"
-        description="Need a beautiful, well-structured website ? Get in touch.s"
+        description="Need a beautiful, well-structured website ? Get in touch."
         name="Florent Baleinier"
         type="website"
       />

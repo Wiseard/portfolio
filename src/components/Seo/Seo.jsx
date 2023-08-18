@@ -6,14 +6,11 @@ const Seo = ({ title, description, name, type }) => {
       {/* Standard metadata tags */}
       <title>{title}</title>
       <meta name="description" content={description} />
-      <meta name="author" content={name} />
-      <meta name="type" content={type} />
-
       {/* End standard metadata tags */}
       {/* Facebook tags */}
-      {/* <meta property="og:type" content={type} />
+      <meta property="og:type" content={type} />
       <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} /> */}
+      <meta property="og:description" content={description} />
       {/* End Facebook tags */}
       {/* Twitter tags */}
       <meta name="twitter:creator" content={name} />
